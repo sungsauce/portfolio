@@ -1,0 +1,9 @@
+.smooth {
+  height: 100vh;
+  text-align: center;
+}
+
+#nav {
+  height: 70px;
+  position: fixed;
+}
