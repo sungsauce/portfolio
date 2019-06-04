@@ -1,6 +1,6 @@
 html {
   scroll-behavior: smooth;
-  /* font-size: calc(1em + 1vw); */
+  font-size: 1em;
 }
 
 .section {
@@ -39,6 +39,7 @@ html {
 }
 
 /* Home */
+
 #greeting {
   font-family: 'Roboto Slab', serif;
   font-size: 6em;
@@ -50,19 +51,25 @@ html {
 }
 
 #title-desc {
+  width: 100%;
   font-size: 2em;
 }
 
 /* About */
+#about img {
+  height: 20em;
+  width: 20em;
+  margin-bottom: 3em;
+}
 
-#about .row {
+#about .col:first-child {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
-.about-caption {
-  margin-top: 3em;
+#about .col:nth-child(2) {
+  min-width: 20em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -155,21 +162,34 @@ form {
   background-color: #F3D250;
 }
 
-@media (min-width: 576px) {
+@media screen and (min-width: 320px) {
   html {
-    font-size: 1.2rem;
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
   }
-  p, li, .skill-cats {
-    font-size: 1.2rem;
+}
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 22px;
   }
 }
 
+/* @media screen and (min-width: 50em) {
+  html {
+    font-size: 2vw;
+  }
+} */
+/* 
 @media (min-width: 768px) {
   html {
-    font-size: 2rem;
+    font-size: 2vw;
   }
   p, li, .skill-cats {
     font-size: 1.4rem;
+  }
+  #about .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -189,4 +209,4 @@ form {
   p, li, .skill-cats {
     font-size: 1rem;
   }
-}
+} */

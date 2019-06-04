@@ -1,7 +1,7 @@
 import React from 'react'
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 import Popover from 'react-bootstrap/Popover'
-import { Container, Row, Col, Image } from 'react-bootstrap'
+import { Container, Row, Col, Image, Collapse } from 'react-bootstrap'
 
 const popover = (
   <Popover id="popover-basic">
@@ -18,10 +18,10 @@ export default function About() {
       <h1 className="header">I am...</h1>
       <Container>
         <Row>
-          <Col xs="auto" lg={true}>
+          <Col>
             <Image src="profile.jpg" roundedCircle />
           </Col>
-          <Col xs="auto" lg={true} className="about-caption">
+          <Col className="about-caption">
             <p>
               a fearless full stack software engineer specializing in the NERD
               stack (Node, Express, React/Redux, Databases with SQL). Before

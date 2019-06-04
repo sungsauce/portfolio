@@ -1,5 +1,5 @@
 import React from 'react'
-import {Container} from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
 
 const titles = [
   'Market Researcher',
@@ -27,13 +27,11 @@ export default function Intro() {
   switchTitle()
   return (
     <div id="intro" className="section">
-      <Container>
-        <h1 id="greeting">Hi, I'm Wendy:</h1>
-        <p id="title-desc">
-          <span id="title-name">{titles[0]}</span> turned Full Stack Software
-          Engineer
-        </p>
-      </Container>
+      <h1 id="greeting">Hi, I'm Wendy:</h1>
+      <p id="title-desc">
+        <span id="title-name">{titles[0]}</span> turned Full Stack Software
+        Engineer
+      </p>
     </div>
   )
 }

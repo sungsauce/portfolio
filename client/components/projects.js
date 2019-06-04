@@ -38,7 +38,7 @@ export default function Projects() {
         <CardDeck>
           {projects.map(p => {
             return (
-              <Card key={p.title} style={{ width: '18rem' }}>
+              <Card key={p.title}>
                 <Card.Img variant="top" src={p.img} />
                 <Card.Body>
                   <Card.Title>{p.title}</Card.Title>
