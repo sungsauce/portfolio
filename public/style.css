@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  /* font-size: calc(1em + 1vw); */
 }
 
 .section {
@@ -12,8 +13,9 @@ html {
 
 .header {
   font-family: 'Roboto Slab', serif;
-  font-size: 4rem;
-  margin-bottom: 3rem;
+  font-size: 4em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 /* Navbar */
@@ -22,7 +24,7 @@ html {
   position: fixed;
   background-color: #ECECEC;
   width: 100vw;
-  height: 70px;
+  height: 4em;
   z-index: 10;
 }
 
@@ -31,7 +33,7 @@ html {
   margin-right: 20px;
 }
 
-.navbar-collapse.collapse.show {
+.show .navbar-nav {
   background-color: #ffffff;
   text-align: center;
 }
@@ -39,8 +41,8 @@ html {
 /* Home */
 #greeting {
   font-family: 'Roboto Slab', serif;
-  font-size: 6rem;
-  margin-bottom: 3rem;
+  font-size: 6em;
+  margin-bottom: 1em;
 }
 
 #title-name {
@@ -48,12 +50,19 @@ html {
 }
 
 #title-desc {
-  font-size: 2rem;
+  font-size: 2em;
 }
 
 /* About */
 
+#about .row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .about-caption {
+  margin-top: 3em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -73,10 +82,11 @@ p, li {
   font-family: 'Raleway', sans-serif;
 }
 
-.col h6 {
+.skill-cats {
   text-transform: uppercase;
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
+  /* margin-top: 1em; */
 }
 
 /* Projects */
@@ -84,20 +94,24 @@ p, li {
 .details {
   background-color: #F3D250;
   border-color: #F3D250;
-  border-radius: 3px;
+  border-radius: 0.2em;
   /* color: grey; */
 }
 
 /* Contact */
 
 form {
-  margin-bottom: 3rem;
+  margin-bottom: 3em;
+}
+
+.form-label, form button {
+  font-family: 'Raleway', sans-serif;
 }
 
 .contact-submit {
   background-color: #90CCF4;
   border-color: #90CCF4;
-  border-radius: 3px;
+  border-radius: 0.2em;
 }
 
 #contact-icons {
@@ -139,4 +153,40 @@ form {
 
 #contact {
   background-color: #F3D250;
+}
+
+@media (min-width: 576px) {
+  html {
+    font-size: 1.2rem;
+  }
+  p, li, .skill-cats {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 2rem;
+  }
+  p, li, .skill-cats {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 992px) {
+  html {
+    font-size: 1.6rem;
+  }
+  p, li, .skill-cats {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 1rem;
+  }
+  p, li, .skill-cats {
+    font-size: 1rem;
+  }
 }

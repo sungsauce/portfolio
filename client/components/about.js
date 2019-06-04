@@ -1,17 +1,13 @@
 import React from 'react'
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 import Popover from 'react-bootstrap/Popover'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons'
 import { Container, Row, Col, Image } from 'react-bootstrap'
 
 const popover = (
   <Popover id="popover-basic">
-    Answering the question "Where are you from?" has never been easy for me. I
-    was born in Taiwan and raised in Thailand, but with an identity ambiguously
+    Answering the question "Where are you from?" has never been easy for me. I consider my identity ambiguously
     divided across 3 different cultures: Taiwanese (birthplace, nationality),
-    Thai (hometown), and American (educated from Pre-K through secondary school,
-    and current resident of over 10 years). The intersection of these is what I
+    Thai (raised there), and American (school I attended in Thailand, and current residence). The intersection of these is what I
     call the "fourth culture" -- that of my own.
   </Popover>
 )
@@ -22,15 +18,15 @@ export default function About() {
       <h1 className="header">I am...</h1>
       <Container>
         <Row>
-          <Col>
+          <Col xs="auto" lg={true}>
             <Image src="profile.jpg" roundedCircle />
           </Col>
-          <Col className="about-caption">
+          <Col xs="auto" lg={true} className="about-caption">
             <p>
               a fearless full stack software engineer specializing in the NERD
               stack (Node, Express, React/Redux, Databases with SQL). Before
               software engineering, I've tackled challenges across the worlds of
-              journalism, advertising, market research, language education, and
+              journalism, advertising, market research, education, and
               social media analytics. With my skills in software engineering and
               background in business strategy,{' '}
               <u>
@@ -42,15 +38,15 @@ export default function About() {
             </p>
             <p>
               When I'm not out in the battlefields of code, I enjoy riding my
-              bike around the 5 boroughs, discovering new food and cuisines, and
+              bike across the boroughs of New York, discovering new food, and
               karaoke.
             </p>
             <p>
               I'm also a{' '}
-              <OverlayTrigger placement="right" overlay={popover}>
+              <OverlayTrigger trigger={['hover', 'click']} placement="bottom" overlay={popover}>
                 <span>
                   <u>Fourth Culture Kid</u>{' '}
-                  <FontAwesomeIcon icon={faQuestionCircle} inverse />
+                  <i className="fa fa-question-circle" />
                 </span>
               </OverlayTrigger>
             </p>
