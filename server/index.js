@@ -6,6 +6,8 @@ const volleyball = require('volleyball')
 
 const app = express()
 
+if (process.env.NODE_ENV !== 'production') require('../secrets')
+
 // logging middleware
 app.use(volleyball)
 
@@ -16,7 +18,7 @@ app.use(express.urlencoded({ extended: true }))
 // static middleware
 app.use(express.static(path.join(__dirname, '../public')))
 
-// app.use('/api', require('./api')) // include our routes!
+app.use('/api', require('./api')) // include our routes!
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../public/index.html'))

@@ -12,13 +12,13 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
-      },
+        use: ['style-loader', 'css-loader']
+      }
     ]
   },
-  entry: './client/index.js',
+  entry: ['babel-polyfill', './client/index.js'],
   output: {
     path: path.join(__dirname, 'public'),
     filename: 'bundle.js'
   }
-};
+}

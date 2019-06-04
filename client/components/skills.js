@@ -4,12 +4,12 @@ import {Container, Row, Col} from 'react-bootstrap'
 export default function Skills() {
   return (
     <div id="skills" className="section">
-      <h1>I know...</h1>
+      <h1 className="header">I know...</h1>
       <Container>
         <Row>
           <Col xs={3}>
             <p>
-              I started off in Python, but I'm primarily a Javascript developer now. Here are the languages, technologies, and tools that I've used in the past.
+              I started off in Python, but I'm primarily a Javascript developer now. I won't qualify/quantify how well I know each of these languages, technologies, or tools -- I'll leave that up to you to do <a href="/#contact">once we talk</a>!
             </p>
           </Col>
           <Col>

@@ -1,38 +1,142 @@
-* {
-  margin: 0px;
-}
-
-#nav {
-  width: 100vw;
-  height: 70px;
-  position: fixed;
-  display: flex;
-  justify-content: center;
-}
-
-#nav a {
-  margin: 20px;
-}
-
-#main {
-  /* width: 100vw; */
+html {
+  scroll-behavior: smooth;
 }
 
 .section {
-  height: 100vh;
-  /* text-align: center; */
+  min-height: 100vh;
   align-items: center;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
-.section p {
-  /* width: 800px; */
+.header {
+  font-family: 'Roboto Slab', serif;
+  font-size: 4rem;
+  margin-bottom: 3rem;
+}
+
+/* Navbar */
+
+#nav {
+  position: fixed;
+  background-color: #ECECEC;
+  width: 100vw;
+  height: 70px;
+  z-index: 10;
+}
+
+.nav-link {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.navbar-collapse.collapse.show {
+  background-color: #ffffff;
+  text-align: center;
+}
+
+/* Home */
+#greeting {
+  font-family: 'Roboto Slab', serif;
+  font-size: 6rem;
+  margin-bottom: 3rem;
+}
+
+#title-name {
+  text-decoration: underline;
+}
+
+#title-desc {
+  font-size: 2rem;
+}
+
+/* About */
+
+.about-caption {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Skills */
+
+p a {
+  text-decoration: underline;
+  color: black;
+}
+p a:hover {
+  color: #F3D250;
+}
+
+p, li {
+  font-family: 'Raleway', sans-serif;
+}
+
+.col h6 {
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+}
+
+/* Projects */
+
+.details {
+  background-color: #F3D250;
+  border-color: #F3D250;
+  border-radius: 3px;
+  /* color: grey; */
+}
+
+/* Contact */
+
+form {
+  margin-bottom: 3rem;
+}
+
+.contact-submit {
+  background-color: #90CCF4;
+  border-color: #90CCF4;
+  border-radius: 3px;
+}
+
+#contact-icons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#contact-icons i {
+  font-size: 2em;
+  color: black;
+}
+
+#contact-icons i:hover {
+  transform: scale(1.1);
+}
+
+/* Sections */
+
+#intro {
+  background-color: #F3D250;
+  text-align: center;
 }
 
 #about {
-  background-color: rgb(168, 205, 220);
+  background-color: #90CCF4;
 }
 
+#skills {
+  background-color: #F78888;
+}
 
+#projects {
+  background-color: #5DA2D5;
+}
+
+#experience {
+  background-color: #90CCF4;
+}
+
+#contact {
+  background-color: #F3D250;
+}

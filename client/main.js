@@ -4,14 +4,13 @@ import Skills from './components/skills'
 import Projects from './components/projects'
 import Experience from './components/experience'
 import Contact from './components/contact'
+import Intro from './components/intro'
+import { Container, Row, Col } from 'react-bootstrap'
 
 export default function Main() {
   return (
     <React.Fragment>
-      <div id="intro" className="section">
-        <h1>Hi, I'm Wendy</h1>
-        <p>Market Researcher turned Fearless Full Stack Software Engineer</p>
-      </div>
+      <Intro />
       <About />
       <Skills />
       <Projects />
