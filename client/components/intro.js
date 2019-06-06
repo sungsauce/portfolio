@@ -7,31 +7,36 @@ const titles = [
   'Strategist',
   'Social Media Analyst',
   'Journalist',
-  'Teacher'
+  'Teacher',
+  'Fourth Culture Kid'
 ]
 
-let loadCount = 0
-
-const switchTitle = () => {
-  loadCount++
-  let index = 0
-  const tick = () => {
-    index = index < titles.length - 1 ? index + 1 : 0
-    document.getElementById('title-name').innerHTML = titles[index]
+export default class Intro extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      title: titles[0]
+    }
   }
 
-  if (loadCount === 1) window.setInterval(tick, 2000)
-}
+  componentDidMount () {
+    let index = 0
+    const tick = () => {
+      index = index < titles.length - 1 ? index + 1 : 0
+      this.setState({title: titles[index]})
+    }
+    window.setInterval(tick, 2000)
+  }
 
-export default function Intro() {
-  switchTitle()
-  return (
-    <div id="intro" className="section">
-      <h1 id="greeting">Hi, I'm Wendy:</h1>
-      <p id="title-desc">
-        <span id="title-name">{titles[0]}</span> turned Full Stack Software
-        Engineer
-      </p>
-    </div>
-  )
+  render() {
+    return (
+      <div id="intro" className="section">
+        <h1 id="greeting">Hi, I'm Wendy:</h1>
+        <div id="title-desc">
+          <p id="title-name">{this.state.title}</p> turned Full Stack Software
+          Engineer
+        </div>
+      </div>
+    )
+  }
 }

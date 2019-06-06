@@ -12,6 +12,8 @@ const skills = {
     'Selenium',
     'PostgreSQL',
     'Sequelize',
+    'npm',
+    'webpack',
     'Jasmine (Unit Testing)'
   ],
   tools: [
@@ -63,14 +65,6 @@ export default function Skills() {
                 ))}
               </ul>
             </Col>
-            // <Card key={skillCat} style={{ width: '18rem' }}>
-            //   <Card.Header className="text-muted">{skillCat}</Card.Header>
-            //   <ListGroup variant="flush">
-            //     {skills[skillCat].map(skill => (
-            //       <ListGroup.Item key={skill}>{skill}</ListGroup.Item>
-            //     ))}
-            //   </ListGroup>
-            // </Card>
           ))}
         </Row>
       </Container>

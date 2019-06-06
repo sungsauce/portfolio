@@ -1,43 +1,116 @@
 import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
+
+// TODO: collapse-all function to view summary
+
+const experiences = [
+  {
+    isWork: true,
+    title: 'Software Engineering Teaching Fellow',
+    company: 'Fullstack Academy Of Code',
+    companyLink: 'https://www.fullstackacademy.com/',
+    dates: 'April 2019 - Present',
+    description: [
+      'One of only 8 students offered the Fullstack Teaching Fellowship',
+      'Administer technical interviews for prospective students, lead daily standups and code reviews, teach data structures, algorithms and the NERD stack (Node, Express, React, Redux, Databases with SQL)'
+    ]
+  },
+  {
+    isWork: false,
+    title: 'Software Engineering Immersive',
+    company: 'Grace Hopper Program at Fullstack Academy Of Code',
+    companyLink: 'https://www.gracehopper.com/',
+    dates: 'January 2019 - April 2019',
+    description: [
+      '17-week immersive coding program',
+      'Senior Panel speaker',
+      'Hackathon winner'
+    ]
+  },
+  {
+    isWork: true,
+    title: 'Software Support Lead, Client Strategist',
+    company: 'ListenFirst Media',
+    companyLink: 'https://www.listenfirstmedia.com/',
+    dates: 'October 2017 - December 2018',
+    description: [
+      'Reduced time to complete an administrative task from 4 hours to 4 minutes by writing an automation script using Python and Selenium',
+      'Converted accounts like Sony and Fidelity Investments from trial to contract using big data analysis and collaborating cross-functionally across Product, UX/UI, Engineering and Sales using task management tools like JIRA and Asana'
+    ]
+  },
+  {
+    isWork: true,
+    title: 'Senior Research Executive',
+    company: 'Hall & Partners',
+    companyLink: 'https://www.hallandpartners.com/',
+    dates: 'April 2016-July 2017',
+    description: [
+      'Helped Fortune 100 companies craft global marketing strategies by utilizing quantitative research methodologies: A/B monadic testing, trend tracking and projecting, discrete choice modelling, data calibration, and statistical testing'
+    ]
+  },
+  {
+    isWork: true,
+    title: 'Research Executive',
+    company: 'Hall & Partners',
+    companyLink: 'https://www.hallandpartners.com/',
+    dates: 'July 2014-March 2016',
+    description: [
+      'Leveraged quantitative, qualitative and secondary research methodologies to conduct brand tracking, creative concept testing, customer decision journey exploration, and strategic analyses '
+    ]
+  },
+  {
+    isWork: true,
+    title: 'Account Executive',
+    company: 'Havas',
+    companyLink: 'https://havas.com/',
+    dates: 'March 2011-September 2012',
+    description: [
+      'Facilitated the completion of over 70 projects on an $8M pharmaceutical business by liaising between the multiple agency departments, client communications and managing project timelines, resources, vendors, and finances'
+    ]
+  },
+  {
+    isWork: false,
+    title:
+      'Bachelor of Science, Double Major in Advertising and International Relations',
+    company: 'University of Miami',
+    companyLink: 'https://welcome.miami.edu/',
+    dates: null,
+    description: ['Dean’s Scholarship', 'Provost’s Honor Roll', 'Dean’s List']
+  }
+]
 
 export default function Experience() {
   return (
     <div id="experience" className="section">
       <h1 className="header">I've been...</h1>
-      <Container>
-        <p>
-          Est fugiat nisi duis officia enim tempor nulla Lorem occaecat esse
-          minim elit ipsum sunt. Laboris aliquip exercitation enim duis sint
-          consequat. Quis consectetur elit velit ea minim eu ipsum et. Sint
-          pariatur nisi magna cillum incididunt excepteur esse nisi sit.
-          Proident magna incididunt ex velit est aliquip pariatur sit
-          consectetur aute deserunt consequat. Ipsum nostrud labore cillum magna
-          proident reprehenderit. Pariatur exercitation enim deserunt irure
-          nulla anim dolore sit magna. Exercitation labore sunt pariatur laborum
-          commodo anim enim ea fugiat reprehenderit amet. Aliqua nisi elit nisi
-          esse nisi sunt anim proident aliquip nostrud velit et non minim.
-          Labore excepteur sint elit excepteur mollit ipsum veniam. In aliquip
-          nostrud est do minim. Commodo laboris eiusmod ut excepteur enim elit
-          non eu commodo cupidatat. Sint nostrud ex eu occaecat ex incididunt
-          ea. Dolore Lorem ut quis qui tempor duis eu pariatur enim dolor cillum
-          nisi. Mollit tempor reprehenderit eu nisi ullamco. Eiusmod commodo
-          ullamco nulla officia. Aliquip eiusmod dolor occaecat tempor pariatur
-          incididunt cillum ullamco magna cupidatat quis quis. Veniam velit
-          velit culpa duis dolor sint. Anim irure do occaecat Lorem consequat
-          magna cupidatat. Non duis laborum ad aliqua do et nisi quis pariatur
-          ex voluptate consequat do. Proident esse et cillum occaecat nisi
-          tempor sint deserunt commodo non ipsum qui. Duis irure ullamco duis
-          officia sunt laboris veniam consequat occaecat fugiat anim duis
-          dolore. Culpa eu consectetur laborum commodo consequat commodo nulla
-          aliqua aute sint aute aliquip. Velit incididunt labore excepteur velit
-          culpa veniam ex do dolore deserunt. Nisi id exercitation labore aliqua
-          irure magna reprehenderit nulla minim enim eu minim officia. Sit
-          aliqua non cillum consectetur eu voluptate labore. Duis incididunt ex
-          non occaecat duis id est voluptate enim laborum. Lorem commodo tempor
-          mollit culpa. Ad ipsum in minim ad esse deserunt.
-        </p>
-      </Container>
+      <div className="timeline">
+        {experiences.map((ex, i) => (
+          <div
+            key={ex.title}
+            className={`ex-container ${i % 2 ? 'right' : 'left'}`}
+          >
+            <div className="content">
+              <h6>
+                <strong>{ex.title}</strong>
+              </h6>
+              <p>
+                <a
+                  href={ex.companyLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {ex.company}
+                </a>
+              </p>
+              <p>{ex.dates}</p>
+              <ul>
+                {ex.description.map(d => (
+                  <li key={d}>{d}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }

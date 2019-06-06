@@ -2,6 +2,27 @@ import React, { Component } from 'react'
 import { Container, Form, Row, Col, Button } from 'react-bootstrap'
 import Axios from 'axios'
 
+// TODO: Add loading and sent confirmation
+
+const contactIcons = [
+  {
+    link: 'mailto:wendalssung@gmail.com',
+    faName: 'fas fa-envelope'
+  },
+  {
+    link: 'https://github.com/sungsauce',
+    faName: 'fab fa-github'
+  },
+  {
+    link: 'https://www.linkedin.com/in/wendysung/',
+    faName: 'fab fa-linkedin'
+  },
+  {
+    link: 'https://twitter.com/wendysungasong',
+    faName: 'fab fa-twitter-square'
+  }
+]
+
 export default class Contact extends Component {
   constructor() {
     super()
@@ -77,41 +98,24 @@ export default class Contact extends Component {
                 Please provide a message.
               </Form.Control.Feedback>
             </Form.Group>
-
-            <Button bsPrefix="contact-submit" type="submit">
-              Submit
-            </Button>
+            <div id="submit">
+              <Button bsPrefix="contact-submit" type="submit">
+                Send
+              </Button>
+            </div>
           </Form>
 
           <Row id="contact-icons">
-            <a
-              href="mailto:wendalssung@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fas fa-envelope" />
-            </a>
-            <a
-              href="https://github.com/sungsauce"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-github" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/wendysung/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-linkedin" />
-            </a>
-            <a
-              href="https://twitter.com/wendysungasong"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-twitter-square" />
-            </a>
+            {contactIcons.map(icon => (
+              <a
+                key={icon.link}
+                href={icon.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className={icon.faName} />
+              </a>
+            ))}
           </Row>
         </Container>
       </div>
