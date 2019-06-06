@@ -6,7 +6,7 @@ import Axios from 'axios'
 
 const contactIcons = [
   {
-    link: 'mailto:wendalssung@gmail.com',
+    link: 'mailto:wendysungportfolio@gmail.com',
     faName: 'fas fa-envelope'
   },
   {

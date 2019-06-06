@@ -4,7 +4,7 @@ import { Container, Modal, Card, Image } from 'react-bootstrap'
 const projects = [
   {
     title: 'Whazzat?!',
-    img: 'julia.jpg',
+    img: 'whazzat.png',
     text: 'Mobile OCR app built using React Expo',
     footer: 'Solo Project'
   },
