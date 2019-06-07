@@ -5,28 +5,47 @@ const projects = [
   {
     title: 'Whazzat?!',
     img: 'whazzat.png',
-    text: 'Mobile OCR app built using React Expo',
-    footer: 'Solo Project'
+    description:
+      'This mobile OCR app won me a "Nerd Cred" award (most technologically challenging) during a 3-day hackathon. "Whazzat?!" allows you to identify any ambiguous-looking object using just your phone camera and an internet connection. Maybe you\'re travelling and want to know the name of a foreign dish, or maybe you\'re learning English and want to know the words for everyday things -- "Whazzat?!" to the rescue!',
+    specs: [
+      'Solo Project',
+      'React Native Expo / Redux / Google Cloud Vision API / Wikipedia API'
+    ],
+    link: '',
+    github: 'https://github.com/sungsauce/stackathon'
   },
   {
     title: 'Julia',
     img: 'julia.jpg',
-    text:
-      'Voice Assistant Web Application built using React, Redux, Express, and Node.js',
-    footer: 'Group Project'
+    description:
+      'This voice assistant web application was featured as one of Fullstack\'s 5 "Groundbreaking Projects" from Demo Day. Our team wanted a solution to the common struggle of following recipe instructions while cooking, so we created Julia: a voice assistant powered by the WebSpeech API that would allow you to use your voice to do things like navigate a recipe and identify ingredients specific to a particular recipe step. Julia also serves as your online cookbook where you can add recipes from your favorite sites. My Individual contributions included web scraping for those user-submitted recipes, configuring voice commands and website responsiveness. We collaborated using an agile development framework: 1 week sprints, daily scrums, code reviews, pair programming, tracking issues with Waffle.io',
+    specs: [
+      'Group Project',
+      'React / Redux / Node / Express / PostgreSQL / Travis CI/CD / Heroku / WebSpeech API / Web Scraping with Cheerio'
+    ],
+    link: 'http://maries-roc-julia.herokuapp.com/',
+    github: 'https://github.com/1901cs-maries-roc/julia'
   },
   {
     title: "Hot N' Saucey",
     img: 'hotnsaucey.png',
-    text:
-      'E-commerce site selling hot sauces; built using React, Redux, Express, and Node.js',
-    footer: 'Group Project'
+    description:
+      'We built an e-commerce site for hot sauces within 7 business days with functions including product filtering, cart editing, cart persistence, payment using Stripe, and user account management. My individual contributions included product filtering, cart persistence between guest and logged in user, payments and deployment.',
+    specs: [
+      'Group Project',
+      'React / Redux / Node / Express / PostgreSQL / Passport / Stripe / Travis CI/CD / Heroku'
+    ],
+    link: 'http://mercury-cap-graceshopper.herokuapp.com',
+    github: 'https://github.com/mercury-cap/graceshopper'
   },
   {
     title: 'Mind of a Planner',
     img: 'planner.png',
-    text: 'Quantitative Research Study',
-    footer: 'Solo Project'
+    description:
+      'I was once pining for a job as a strategist in the advertising world, and wanted a way to demonstrate my strategic skills. To that end, I interviewed 6 planners and surveyed 27 professionals in the field, then used SPSS to run statistical and correlation analyses in order to explore the psychographics of Account Planners.',
+    specs: ['Solo Project'],
+    link: '',
+    github: ''
   }
 ]
 
@@ -35,7 +54,7 @@ export default class Projects extends React.Component {
     super()
     this.state = {
       showPreview: false,
-      currProj: {},
+      currProj: { specs: [] },
       hoverDisplay: projects.reduce((acc, p) => {
         acc[p.title] = 'none'
         return acc
@@ -52,13 +71,13 @@ export default class Projects extends React.Component {
   }
 
   hoverIn = p => {
-    this.setState((state) => {
+    this.setState(state => {
       return { hoverDisplay: { ...state.hoverDisplay, [p.title]: 'block' } }
     })
   }
 
   hoverOut = p => {
-    this.setState((state) => {
+    this.setState(state => {
       return { hoverDisplay: { ...state.hoverDisplay, [p.title]: 'none' } }
     })
   }
@@ -92,9 +111,55 @@ export default class Projects extends React.Component {
             <Modal.Title>{currProj.title}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <Image src={currProj.img} fluid />
-            <h4>{currProj.footer}</h4>
-            <p>{currProj.text}</p>
+            {currProj.title === 'Mind of a Planner' ? (
+              <iframe
+                src="https://www.slideshare.net/wendysungasong/slideshelf"
+                width="760px"
+                height="570px"
+                frameBorder="0"
+                marginWidth="0"
+                marginHeight="0"
+                scrolling="no"
+                style={{border: 'none'}}
+                allowFullScreen
+                webkitallowfullscreen
+                mozallowfullscreen
+              />
+            ) : (
+              <Image src={currProj.img} fluid />
+            )}
+            <div id="proj-details">
+              <div id="proj-specs">
+                {currProj.specs.map(spec => (
+                  <p key={spec}>{spec}</p>
+                ))}
+                {currProj.link ? (
+                  <div>
+                    <a
+                      href={currProj.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="fas fa-link" /> Deployed Site
+                    </a>
+                  </div>
+                ) : null}
+                {currProj.github ? (
+                  <div>
+                    <a
+                      href={currProj.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="fab fa-github" /> GitHub Repo
+                    </a>
+                  </div>
+                ) : null}
+              </div>
+              <div id="proj-desc">
+                <p>{currProj.description}</p>
+              </div>
+            </div>
           </Modal.Body>
         </Modal>
       </div>

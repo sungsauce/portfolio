@@ -9,6 +9,7 @@ html {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  padding: 2em;
 }
 
 .header {
@@ -45,6 +46,7 @@ html {
 #greeting {
   font-size: 2.5em;
   margin-bottom: 1em;
+  font-family: 'Raleway', sans-serif;
 }
 
 #title-name {
@@ -59,9 +61,9 @@ html {
 
 /* About */
 #about img {
-  height: 20em;
-  width: 20em;
-  margin-bottom: 3em;
+  height: 20rem;
+  width: 20rem;
+  margin-bottom: 3rem;
 }
 
 #about .col:first-child {
@@ -147,7 +149,7 @@ p, li {
 }
 
 .card-img-overlay {
-  background-color: rgba(120, 120, 120, 0.523);
+  background-color: rgba(120, 120, 120, 0.591);
   height: 100%;
   width: 100%;
 }
@@ -158,6 +160,25 @@ p, li {
   align-items: center;
   height: 100%;
   width: 100%;
+}
+
+.modal-body img {
+  padding-bottom: 1em;
+}
+
+#proj-details {
+  display: flex;
+  padding: 1em;
+}
+
+#proj-specs {
+  flex: 1;
+  margin-right: 1em;
+}
+
+#proj-desc {
+  flex: 2;
+  color: grey;
 }
 
 /* Experience */
@@ -205,19 +226,6 @@ p, li {
   z-index: 1;
 }
 
-/* .ex-container::after {
-  content: 'b';
-  position: absolute;
-  right: -26px;
-  width: 25px;
-  height: 25px;
-  background-color: white;
-  border: 4px solid #FF9F55;
-  top: 15px;
-  border-radius: 50%;
-  z-index: 1;
-} */
-
 /* Place the container to the left */
 .left {
   left: 0;
@@ -263,7 +271,7 @@ p, li {
 
 /* The actual content */
 .content {
-  padding: 20px 30px;
+  padding: 2em 2em;
   background-color: white;
   position: relative;
   border-radius: 6px;
@@ -310,6 +318,10 @@ p, li {
   /* Make all right containers behave like the left ones */
   .right {
   left: 0%;
+  }
+
+  .content ul {
+    padding-inline-start: 1em;
   }
 }
 
@@ -362,7 +374,6 @@ form {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 2em;
 }
 
 #about {
@@ -387,16 +398,24 @@ form {
 
 @media screen and (min-width: 320px) {
   html {
-    font-size: calc(1rem + 6 * ((100vw - 320px) / 680));
-    /* font-size: 2vw; */
+    font-size: 0.8rem;
+  }
+  #intro {
+    font-size: 6px;
+  }
+}
 
-    /* font-size: 8px; */
+@media screen and (min-width: 360px) {
+  html {
+    /* font-size: calc(1rem + 6 * ((100vw - 320px) / 680)); */
+    font-size: 0.9rem;
   }
   #intro {
     font-size: 8px;
   }
 }
-@media screen and (min-width: 1000px) {
+
+@media screen and (min-width: 1024px) {
   html {
     font-size: 1rem;
   }

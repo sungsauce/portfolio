@@ -90,7 +90,12 @@ export default function Experience() {
           >
             <div className="content">
               <h6>
-                <strong>{ex.title}</strong>
+                {ex.isWork ? (
+                  <i className="fas fa-briefcase" />
+                ) : (
+                  <i className="fas fa-graduation-cap" />
+                )}
+                <strong> {ex.title}</strong>
               </h6>
               <p>
                 <a
