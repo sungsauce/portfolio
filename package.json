@@ -6,6 +6,7 @@
   "scripts": {
     "start:dev": "npm run build-watch & npm run start-server",
     "build-watch": "webpack -w",
+    "build-client": "webpack",
     "start-server": "nodemon --watch server",
     "start": "node main",
     "deploy": "script/deploy"
