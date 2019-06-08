@@ -7,7 +7,8 @@
     "start:dev": "npm run build-watch & npm run start-server",
     "build-watch": "webpack -w",
     "start-server": "nodemon --watch server",
-    "start": "node main"
+    "start": "node main",
+    "deploy": "script/deploy"
   },
   "author": "",
   "license": "ISC",
