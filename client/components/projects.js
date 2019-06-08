@@ -49,6 +49,7 @@ const projects = [
   }
 ]
 
+
 export default class Projects extends React.Component {
   constructor() {
     super()
