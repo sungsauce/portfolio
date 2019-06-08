@@ -5,10 +5,11 @@ import { Container, Row, Col, Image, Collapse } from 'react-bootstrap'
 
 const popover = (
   <Popover id="popover-basic">
-    Answering the question "Where are you from?" has never been easy for me. I consider my identity ambiguously
-    divided across 3 different cultures: Taiwanese (birthplace, nationality),
-    Thai (raised there), and American (school I attended in Thailand, and current residence). The intersection of these is what I
-    call the "fourth culture" -- that of my own.
+    Answering the question "Where are you from?" has never been easy for me. I
+    consider my identity ambiguously divided across 3 different cultures:
+    Taiwanese (birthplace, nationality), Thai (raised there), and American
+    (school I attended in Thailand, and current residence). The intersection of
+    these is what I call the "fourth culture" -- that of my own.
   </Popover>
 )
 
@@ -26,9 +27,9 @@ export default function About() {
               a fearless full stack software engineer specializing in the NERD
               stack (Node, Express, React/Redux, Databases with SQL). Before
               software engineering, I've tackled challenges across the worlds of
-              journalism, advertising, market research, education, and
-              social media analytics. With my skills in software engineering and
-              background in business strategy,{' '}
+              data analytics, market research, advertising, journalism, and
+              education. With my skills in software engineering and background
+              in business strategy,{' '}
               <u>
                 I can understand problems from both a technical and business
                 perspective.
@@ -43,7 +44,11 @@ export default function About() {
             </p>
             <p>
               I'm also a{' '}
-              <OverlayTrigger trigger={['hover', 'click']} placement="bottom" overlay={popover}>
+              <OverlayTrigger
+                trigger={['hover', 'click']}
+                placement="bottom"
+                overlay={popover}
+              >
                 <span>
                   <u>Fourth Culture Kid</u>{' '}
                   <i className="fa fa-question-circle" />

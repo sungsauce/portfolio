@@ -47,11 +47,7 @@ export default function Skills() {
           <Col xs="auto" lg={20}>
             <p>
               Javascript as my primary language, though I started off in Python.
-              As you may have noticed, I haven't qualified/quantified how well I
-              know each of these languages, technologies, or tools -- as much as
-              I'd like to say that I'm an expert in all of them, I believe
-              that's best left for you to determine based on my work below or{' '}
-              <a href="/#contact">having a conversation with me</a>!
+              I currently specialize in the NERD stack (Node, Express, React/Redux, Databases with SQL), and have experience collaborating on projects using scrum and CI/CD with unit testing.
             </p>
           </Col>
         </Row>
