@@ -23,6 +23,8 @@ html {
 
 #nav {
   position: fixed;
+  top: -4em;
+  transition: top 0.3s;
   background-color: #ECECEC;
   width: 100vw;
   height: 4em;

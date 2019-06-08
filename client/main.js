@@ -5,7 +5,6 @@ import Projects from './components/projects'
 import Experience from './components/experience'
 import Contact from './components/contact'
 import Intro from './components/intro'
-import { Container, Row, Col } from 'react-bootstrap'
 
 export default function Main() {
   return (

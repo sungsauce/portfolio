@@ -1,9 +1,24 @@
 import React from 'react'
-import {Route} from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import Main from './main'
-import {Navbar, Nav} from 'react-bootstrap'
+import { Navbar, Nav } from 'react-bootstrap'
 
 const Root = () => {
+  window.onscroll = function() {
+    scrollFunction()
+  }
+
+  function scrollFunction() {
+    if (
+      document.body.scrollTop > 60 ||
+      document.documentElement.scrollTop > 60
+    ) {
+      document.getElementById('nav').style.top = '0'
+    } else {
+      document.getElementById('nav').style.top = '-4em'
+    }
+  }
+
   return (
     <div>
       <Navbar id="nav" expand="lg">
