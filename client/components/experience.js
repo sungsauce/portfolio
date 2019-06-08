@@ -91,9 +91,9 @@ export default function Experience() {
             <div className="content">
               <h6>
                 {ex.isWork ? (
-                  <i className="fas fa-briefcase" />
+                  <i className="fas fa-briefcase" style={{color: '#F3D250'}} />
                 ) : (
-                  <i className="fas fa-graduation-cap" />
+                  <i className="fas fa-graduation-cap" style={{color: '#F78888'}} />
                 )}
                 <strong> {ex.title}</strong>
               </h6>

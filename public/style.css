@@ -25,7 +25,7 @@ html {
   position: fixed;
   top: -4em;
   transition: top 0.3s;
-  background-color: #ECECEC;
+  background-color: #90CCF4;
   width: 100vw;
   height: 4em;
   z-index: 10;
@@ -48,7 +48,8 @@ html {
 #greeting {
   font-size: 2.5em;
   margin-bottom: 1em;
-  font-family: 'Raleway', sans-serif;
+  /* font-family: 'Raleway', sans-serif; */
+  font-family: 'Roboto Slab', serif;
 }
 
 #title-name {
@@ -65,7 +66,13 @@ html {
 #about img {
   height: 20rem;
   width: 20rem;
-  margin-bottom: 3rem;
+  border: 1em solid #5DA2D5;
+}
+
+@media screen and (max-width: 600px) {
+  #about img {
+    margin-bottom: 3rem;
+  }
 }
 
 #about .col:first-child {
@@ -103,24 +110,13 @@ p, li {
   text-transform: uppercase;
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
+  background-color: #F3D250;
   /* margin-top: 1em; */
 }
 
 /* Projects */
 
-.details {
-  background-color: #F3D250;
-  border-color: #F3D250;
-  border-radius: 0.2em;
-}
-
-.details:hover {
-  background-color: rgb(252, 204, 14);
-  border-color: rgb(252, 204, 14);
-}
-
 #project-cards {
-  /* width: 90vw; */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -200,7 +196,7 @@ p, li {
   content: '';
   position: absolute;
   width: 6px;
-  background-color: white;
+  background-color: #5DA2D5;
   top: 0;
   bottom: 0;
   left: 50%;
@@ -222,8 +218,8 @@ p, li {
   right: -13px;
   width: 25px;
   height: 25px;
-  background-color: #F3D250;
-  border: 4px solid white;
+  background-color: #90CCF4;
+  border: 4px solid #5DA2D5;
   top: 15px;
   border-radius: 50%;
   z-index: 1;
@@ -372,27 +368,15 @@ form {
 /* Sections */
 
 #intro {
-  background-color: #F3D250;
+  background-color: #ECECEC;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
 }
 
-#about {
-  background-color: #90CCF4;
-}
-
-#skills {
-  background-color: #F78888;
-}
-
-#projects {
-  background-color: #5DA2D5;
-}
-
-#experience {
-  background-color: #90CCF4;
+#about, #skills, #projects, #experience {
+  background-color: #ECECEC
 }
 
 #contact {
