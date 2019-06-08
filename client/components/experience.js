@@ -10,7 +10,7 @@ const experiences = [
     companyLink: 'https://www.fullstackacademy.com/',
     dates: 'April 2019 - Present',
     description: [
-      'One of only 8 students offered the Fullstack Teaching Fellowship',
+      'One of only 8 graduates offered the Fullstack Teaching Fellowship',
       'Administer technical interviews for prospective students, lead daily standups and code reviews, teach data structures, algorithms and the NERD stack (Node, Express, React, Redux, Databases with SQL)'
     ]
   },
@@ -28,12 +28,12 @@ const experiences = [
   },
   {
     isWork: true,
-    title: 'Software Support Lead, Client Strategist',
+    title: 'Product Support Lead, Data Analyst',
     company: 'ListenFirst Media',
     companyLink: 'https://www.listenfirstmedia.com/',
     dates: 'October 2017 - December 2018',
     description: [
-      'Reduced time to complete an administrative task from 4 hours to 4 minutes by writing an automation script using Python and Selenium',
+      'Reduced time to complete administrative tasks from 4 hours to 4 minutes by writing an automation script using Python and Selenium',
       'Converted accounts like Sony and Fidelity Investments from trial to contract using big data analysis and collaborating cross-functionally across Product, UX/UI, Engineering and Sales using task management tools like JIRA and Asana'
     ]
   },
@@ -44,7 +44,7 @@ const experiences = [
     companyLink: 'https://www.hallandpartners.com/',
     dates: 'April 2016-July 2017',
     description: [
-      'Helped Fortune 100 companies craft global marketing strategies by utilizing quantitative research methodologies: A/B monadic testing, trend tracking and projecting, discrete choice modelling, data calibration, and statistical testing'
+      'Helped clients like American Express and Jameson craft global marketing strategies by utilizing quantitative research methodologies: A/B monadic testing, trend tracking and projecting, discrete choice modelling, data calibration, and statistical testing'
     ]
   },
   {

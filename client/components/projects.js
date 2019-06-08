@@ -18,7 +18,7 @@ const projects = [
     title: 'Julia',
     img: 'julia.jpg',
     description:
-      'This voice assistant web application was featured as one of Fullstack\'s 5 "Groundbreaking Projects" from Demo Day. Our team wanted a solution to the common struggle of following recipe instructions while cooking, so we created Julia: a voice assistant powered by the WebSpeech API that would allow you to use your voice to do things like navigate a recipe and identify ingredients specific to a particular recipe step. Julia also serves as your online cookbook where you can add recipes from your favorite sites. My Individual contributions included web scraping for those user-submitted recipes, configuring voice commands and website responsiveness. We collaborated using an agile development framework: 1 week sprints, daily scrums, code reviews, pair programming, tracking issues with Waffle.io',
+      'This voice assistant web application was featured as one of Fullstack\'s 5 "Groundbreaking Projects" from Demo Day. \n\nOur team wanted a solution to the common struggle of following recipe instructions while cooking, so we created Julia: a voice assistant powered by the WebSpeech API that would allow you to use your voice to do things like navigate a recipe and identify ingredients specific to a particular recipe step. Julia also serves as your online cookbook where you can add recipes from your favorite sites. \n\nMy Individual contributions included web scraping for user-submitted recipes, configuring voice commands and website responsiveness. We collaborated using an agile development framework: 1 week sprints, daily scrums, code reviews, pair programming, tracking issues with Waffle.io',
     specs: [
       'Group Project',
       'React / Redux / Node / Express / PostgreSQL / Travis CI/CD / Heroku / WebSpeech API / Web Scraping with Cheerio'
@@ -30,7 +30,7 @@ const projects = [
     title: "Hot N' Saucey",
     img: 'hotnsaucey.png',
     description:
-      'We built an e-commerce site for hot sauces within 7 business days with functions including product filtering, cart editing, cart persistence, payment using Stripe, and user account management. My individual contributions included product filtering, cart persistence between guest and logged in user, payments and deployment.',
+      'We built an e-commerce site for hot sauces within 7 business days using an agile development framework: 1 week sprints, daily scrums, code reviews, pair programming, and tracking issues with Waffle.io. We incorporated features such as product filtering, cart editing, cart persistence, payment using Stripe, and user account management. \n\nMy individual contributions included product filtering, cart persistence between guest and logged in user, payments and deployment.',
     specs: [
       'Group Project',
       'React / Redux / Node / Express / PostgreSQL / Passport / Stripe / Travis CI/CD / Heroku'
@@ -157,7 +157,7 @@ export default class Projects extends React.Component {
                 ) : null}
               </div>
               <div id="proj-desc">
-                <p>{currProj.description}</p>
+                <div>{currProj.description}</div>
               </div>
             </div>
           </Modal.Body>

@@ -179,6 +179,7 @@ p, li {
 #proj-desc {
   flex: 2;
   color: grey;
+  white-space: pre-wrap;
 }
 
 /* Experience */
