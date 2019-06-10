@@ -111,7 +111,8 @@ p, li {
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
   background-color: #F3D250;
-  /* margin-top: 1em; */
+  padding: 0.5em;
+  border-radius: 0.25em;
 }
 
 /* Projects */

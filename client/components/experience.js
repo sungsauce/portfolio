@@ -34,22 +34,22 @@ const experiences = [
     dates: 'October 2017 - December 2018',
     description: [
       'Reduced time to complete administrative tasks from 4 hours to 4 minutes by writing an automation script using Python and Selenium',
-      'Converted accounts like Sony and Fidelity Investments from trial to contract using big data analysis and collaborating cross-functionally across Product, UX/UI, Engineering and Sales using task management tools like JIRA and Asana'
+      'Converted accounts like Sony and Fidelity Investments from trial to contract through strategic consulting using big data analysis and informing the product development process by working cross-functionally across Product, UX/UI, Engineering and Sales'
     ]
   },
   {
     isWork: true,
-    title: 'Senior Research Executive',
+    title: 'Senior Research Executive (Quantitative)',
     company: 'Hall & Partners',
     companyLink: 'https://www.hallandpartners.com/',
     dates: 'April 2016-July 2017',
     description: [
-      'Helped clients like American Express and Jameson craft global marketing strategies by utilizing quantitative research methodologies: A/B monadic testing, trend tracking and projecting, discrete choice modelling, data calibration, and statistical testing'
+      'Consulted the agency\'s key client American Express on its global marketing strategies through use of quantitative research methodologies: A/B monadic testing, trend tracking and projecting, discrete choice modeling, data calibration, and statistical testing'
     ]
   },
   {
     isWork: true,
-    title: 'Research Executive',
+    title: 'Research Executive (Quantitative)',
     company: 'Hall & Partners',
     companyLink: 'https://www.hallandpartners.com/',
     dates: 'July 2014-March 2016',
@@ -64,7 +64,7 @@ const experiences = [
     companyLink: 'https://havas.com/',
     dates: 'March 2011-September 2012',
     description: [
-      'Facilitated the completion of over 70 projects on an $8M pharmaceutical business by liaising between the multiple agency departments, client communications and managing project timelines, resources, vendors, and finances'
+      'Facilitated the completion of over 70 projects on an $8M pharmaceutical business by maintaining internal and external communications and managing project timelines, resources, vendors, and finances'
     ]
   },
   {

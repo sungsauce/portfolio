@@ -123,8 +123,8 @@ export default class Projects extends React.Component {
                 scrolling="no"
                 style={{border: 'none'}}
                 allowFullScreen
-                webkitallowfullscreen
-                mozallowfullscreen
+                webkitallowfullscreen="true"
+                mozallowfullscreen="true"
               />
             ) : (
               <Image src={currProj.img} fluid />
