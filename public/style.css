@@ -366,6 +366,23 @@ form {
   transform: scale(1.1);
 }
 
+#confirmation-container {
+  width: 80vw;
+  position: relative;
+  min-height: 100px;
+}
+
+#confirmation {
+  background-color: rgb(159, 232, 159);
+  color: green;
+  font-size: 1em;
+  min-width: 300px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 2em;
+}
+
 /* Sections */
 
 #intro {

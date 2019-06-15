@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Container, Form, Row, Col, Button } from 'react-bootstrap'
+import { Container, Form, Row, Col, Button, Toast } from 'react-bootstrap'
 import Axios from 'axios'
 
 // TODO: Add loading and sent confirmation
@@ -30,7 +30,8 @@ export default class Contact extends Component {
       validated: false,
       name: '',
       email: '',
-      message: ''
+      message: '',
+      showConfirmation: false
     }
   }
 
@@ -45,16 +46,34 @@ export default class Contact extends Component {
       e.preventDefault()
       e.stopPropagation()
     }
-    this.setState({ validated: true })
+    e.preventDefault()
+    this.setState({ validated: true, showConfirmation: true })
     await Axios.post('/api/contact', this.state)
     form.reset()
     this.setState({ validated: false, name: '', email: '', message: '' })
   }
 
+  handleClose = () => {
+    this.setState({ showConfirmation: false })
+  }
+
   render() {
-    const { validated } = this.state
+    const { validated, showConfirmation } = this.state
     return (
       <div id="contact" className="section">
+        <div id="confirmation-container">
+          <Toast
+            id="confirmation"
+            onClose={this.handleClose}
+            show={showConfirmation}
+            delay={3000}
+            autohide
+            variant="success"
+          >
+            <Toast.Body>Email sent!</Toast.Body>
+          </Toast>
+        </div>
+
         <h1 className="header">Let's talk!</h1>
         <Container>
           <Form noValidate validated={validated} onSubmit={this.handleSubmit}>
@@ -98,6 +117,7 @@ export default class Contact extends Component {
                 Please provide a message.
               </Form.Control.Feedback>
             </Form.Group>
+
             <div id="submit">
               <Button bsPrefix="contact-submit" type="submit">
                 Send

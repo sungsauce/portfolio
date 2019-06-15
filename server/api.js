@@ -23,7 +23,8 @@ router.post('/contact', (req, res, next) => {
     subject: `New message from ${req.body.name} RE: portfolio site!`,
     html: msgBody
   }
-
+  // TODO: send a confirmation email to sender?
+  
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       next(error)
