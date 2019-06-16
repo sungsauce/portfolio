@@ -115,13 +115,11 @@ export default class Projects extends React.Component {
             {currProj.title === 'Mind of a Planner' ? (
               <iframe
                 src="https://www.slideshare.net/wendysungasong/slideshelf"
-                width="760px"
-                height="570px"
+                id="slideshow"
                 frameBorder="0"
                 marginWidth="0"
                 marginHeight="0"
                 scrolling="no"
-                style={{border: 'none'}}
                 allowFullScreen
                 webkitallowfullscreen="true"
                 mozallowfullscreen="true"

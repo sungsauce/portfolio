@@ -133,19 +133,6 @@ p, li {
   margin: 1em;
 }
 
-@media screen and (min-width: 1000px) {
-  .card img, .card {
-    width: 30em;
-    height: 20rem;
-  }
-}
-
-@media screen and (max-width: 999px) {
-  .card img, .card {
-    width: 15em;
-    height: 10em;
-  }
-}
 
 .card-img-overlay {
   background-color: rgba(120, 120, 120, 0.591);
@@ -179,6 +166,43 @@ p, li {
   flex: 2;
   color: grey;
   white-space: pre-wrap;
+}
+
+#slideshow {
+  border: none;
+}
+
+@media screen and (max-width: 600px) {
+  .card img, .card {
+    width: 15em;
+    height: 10em;
+  }
+  #slideshow {
+    width: 300px;
+    height: 288px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .card img, .card {
+    width: 15em;
+    height: 10em;
+  }
+  #slideshow {
+    width: 490px;
+    height: 470px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .card img, .card {
+    width: 30em;
+    height: 20rem;
+  }
+  #slideshow {
+    width: 760px;
+    height: 570px;
+  }
 }
 
 /* Experience */
@@ -292,7 +316,7 @@ p, li {
 @media screen and (max-width: 600px) {
   /* Place the timelime to the left */
   .timeline::after {
-  left: 31px;
+  left: 28px;
   }
   
   /* Full-width containers */

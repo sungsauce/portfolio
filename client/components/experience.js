@@ -11,7 +11,8 @@ const experiences = [
     dates: 'April 2019 - Present',
     description: [
       'One of only 8 graduates offered the Fullstack Teaching Fellowship',
-      'Administer technical interviews for prospective students, lead daily standups and code reviews, teach data structures, algorithms and the NERD stack (Node, Express, React, Redux, Databases with SQL)'
+      'Direct 2 agile teams as Scrum Master, leading daily standups, code reviews and code debugging',
+      'Administer technical interviews for prospective students, teach data structures, algorithms and the NERD stack (Node, Express, React, Redux, Databases with SQL)'
     ]
   },
   {
@@ -29,12 +30,25 @@ const experiences = [
   {
     isWork: true,
     title: 'Product Support Lead, Data Analyst',
-    company: 'ListenFirst Media',
+    company: 'ListenFirst',
     companyLink: 'https://www.listenfirstmedia.com/',
     dates: 'October 2017 - December 2018',
     description: [
       'Reduced time to complete administrative tasks from 4 hours to 4 minutes by writing an automation script using Python and Selenium',
-      'Converted accounts like Sony and Fidelity Investments from trial to contract through strategic consulting using big data analysis and informing the product development process by working cross-functionally across Product, UX/UI, Engineering and Sales'
+      'Managed Junior Analysts in data analysis, data visualization and providing strategic recommendations to external stakeholders; collaborated cross-functionally across Product, UX/UI Designers, Engineering and Sales using task management tools like JIRA and Asana',
+      'Converted trial accounts like Sony and Fidelity Investments to annual contracts'
+    ]
+  },
+  {
+    isWork: false,
+    title: 'Introduction to Programming Nanodegree',
+    company: 'Udacity',
+    companyLink: 'https://www.udacity.com/course/intro-to-programming-nanodegree--nd000',
+    dates: 'November 2017 - April 2018',
+    description: [
+      'Part-time remote program',
+      'Python Fundamentals',
+      'Data Science Track'
     ]
   },
   {
@@ -42,9 +56,10 @@ const experiences = [
     title: 'Senior Research Executive (Quantitative)',
     company: 'Hall & Partners',
     companyLink: 'https://www.hallandpartners.com/',
-    dates: 'April 2016-July 2017',
+    dates: 'April 2016 - July 2017',
     description: [
-      'Consulted the agency\'s key client American Express on its global marketing strategies through use of quantitative research methodologies: A/B monadic testing, trend tracking and projecting, discrete choice modeling, data calibration, and statistical testing'
+      'Managed Junior Researchers on major accounts such as American Express and Jameson',
+      'Provided strategic marketing consulting using quantitative research methodologies: A/B monadic testing, trend tracking and projecting, discrete choice modeling, data calibration, and statistical testing'
     ]
   },
   {
@@ -52,7 +67,7 @@ const experiences = [
     title: 'Research Executive (Quantitative)',
     company: 'Hall & Partners',
     companyLink: 'https://www.hallandpartners.com/',
-    dates: 'July 2014-March 2016',
+    dates: 'July 2014 - March 2016',
     description: [
       'Leveraged quantitative, qualitative and secondary research methodologies to conduct brand tracking, creative concept testing, customer decision journey exploration, and strategic analyses '
     ]
@@ -62,7 +77,7 @@ const experiences = [
     title: 'Account Executive',
     company: 'Havas',
     companyLink: 'https://havas.com/',
-    dates: 'March 2011-September 2012',
+    dates: 'March 2011 - September 2012',
     description: [
       'Facilitated the completion of over 70 projects on an $8M pharmaceutical business by maintaining internal and external communications and managing project timelines, resources, vendors, and finances'
     ]

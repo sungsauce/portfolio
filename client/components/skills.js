@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Row, Col, Card, ListGroup, CardDeck } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 
 const skills = {
   languages: ['Javascript', 'Python', 'HTML/CSS', 'SQL'],
@@ -24,7 +24,7 @@ const skills = {
     'Google Analytics',
     'Mixpanel'
   ],
-  software: ['Adobe Photoshop', 'Adobe Illustrator', 'SPSS'],
+  software: ['Adobe Photoshop', 'Adobe InDesign', 'SPSS'],
   spokenLanguages: ['English', 'Mandarin Chinese', 'Thai']
 }
 
